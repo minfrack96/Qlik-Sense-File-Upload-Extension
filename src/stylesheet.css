@@ -1,5 +1,5 @@
 /*
-Copyright (C) 2019-2020 by Jan Skibniewski
+Copyright (C) 2024-2025 by Mohanned Ahmed
 Licensed under MIT license, see LICENSE.md for details
 */
 
