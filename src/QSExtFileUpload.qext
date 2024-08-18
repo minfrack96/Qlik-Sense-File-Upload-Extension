@@ -1,0 +1,16 @@
+{
+	"name": "File Upload",
+	"description": "Extension for uploading files to app content and content libraries",
+	"icon": "extension",
+	"preview": "icon.png",
+	"type": "visualization",
+	"version": "1.0.0",
+	"author": "Mohanned Ahmed",
+	"homepage": "https://github.com/MohannedA",
+	"keywords": "qlik-sense, visualization, upload file, reload, content library, app content",
+	"license": "MIT",
+	"repository": "https://github.com/MohannedA/QSExtFileUpload",
+	"dependencies": {
+		"qlik-sense": ">=3.0.x"
+	}
+}

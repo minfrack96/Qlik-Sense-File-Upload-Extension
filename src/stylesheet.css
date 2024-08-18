@@ -1,0 +1,121 @@
+/*
+Copyright (C) 2019-2020 by Jan Skibniewski
+Licensed under MIT license, see LICENSE.md for details
+*/
+
+.qv-object-QSExtFileUpload div.qv-object-content-container {
+	overflow: auto;
+}
+
+.qv-object-QSExtFileUpload button {
+	width: 100%;
+	min-width: 25px;
+	white-space: nowrap;
+	margin-right: 10px; /* Adjust spacing between button and span */
+}
+
+.qv-object-QSExtFileUpload .qv-object-nav>.icon-zoom-in {
+	display: none;
+}
+
+@-webkit-keyframes rotating
+/* Safari and Chrome */
+
+	{
+	from {
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes rotating {
+	from {
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	to {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+.rotating {
+	-webkit-animation: rotating 2s linear infinite;
+	-moz-animation: rotating 2s linear infinite;
+	-ms-animation: rotating 2s linear infinite;
+	-o-animation: rotating 2s linear infinite;
+	animation: rotating 2s linear infinite;
+}
+
+div[tid=appTitle] {
+	text-align: center!important;
+	font-size: 28px;
+}
+
+div[tid=createdBy] .value {
+	text-align: center!important;
+}
+
+div[tid=license] .value {
+	text-align: center!important;
+}
+
+div[tid=manual] .value {
+	text-align: center!important;
+}
+
+.upload-button-wrapper {
+	text-align: center;
+	margin-left: 25px;
+}
+
+.upload-button-label-wrapper {
+	display: inline-block;
+	margin: 0 auto;
+}
+
+.upload-button-icon-wrapper {
+	float: right;
+}
+
+.upload-button-icon {
+	width: 24px;
+	height: 24px;
+}
+
+.upload-button-label-wrapper-text-hidden {
+	display: none;
+}
+
+.upload-button-icon-text-hidden {
+	margin: auto;
+}
+
+#upload-button-file-chosen {
+	white-space: nowrap; /* Prevents the text from wrapping */
+}
+
+/* Ensuring the button and span are aligned properly */
+.upload-button-container {
+	display: flex;
+	align-items: center;
+}
+
+.upload-button-container-block {
+	display: block;
+	overflow: hidden;
+	align-items: center;
+}
+

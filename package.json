@@ -1,0 +1,16 @@
+{
+  "name": "qsextfileupload",
+  "version": "3.2.0",
+  "description": "Extension for reloading Qlik Sense apps and tasks",
+  "main": "QSExtFileUpload.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mohanned Ahmed",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-zip": "^4.2.0"
+  },
+  "dependencies": {}
+}
