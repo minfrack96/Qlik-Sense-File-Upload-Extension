@@ -22,7 +22,7 @@ Qlik Sense Extension for uploading files to app content/attached files and conte
 
 ## Installation
 
-1. Download archive `QSExtFileUpload.zip` from [dist](https://github.com/MohannedA/QSExtFileUpload/tree/main/dist) folder.
+1. Download archive `QSExtFileUpload.zip` from [dist](https://github.com/MohannedA/Qlik-Sense-File-Upload-Extension/tree/main/dist) folder.
 2. Go to Qlik's QMC.
 3. Navigate to Extensions section.
 4. Click import button.
