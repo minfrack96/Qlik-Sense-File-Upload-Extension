@@ -81,7 +81,7 @@ define(["./utils"], function (utils) {
                     manual: {
                         label: "Extension configuration & manual",
                         component: "link",
-                        url: "https://github.com/MohannedA/QSExtFileUpload" 
+                        url: "https://github.com/MohannedA/Qlik-Sense-File-Upload-Extension" 
                     },
                     createdBy: {
                         label: "Created by Mohanned Ahmed",

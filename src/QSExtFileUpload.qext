@@ -9,7 +9,7 @@
 	"homepage": "https://github.com/MohannedA",
 	"keywords": "qlik-sense, visualization, upload file, reload, content library, app content",
 	"license": "MIT",
-	"repository": "https://github.com/MohannedA/QSExtFileUpload",
+	"repository": "https://github.com/MohannedA/Qlik-Sense-File-Upload-Extension",
 	"dependencies": {
 		"qlik-sense": ">=3.0.x"
 	}
