@@ -190,7 +190,7 @@ define(["angular", "qlik", "jquery", "./utils", "./propertiesPanel", "text!./tem
 								else {
 									var wasReloaded = sessionStorage.getItem('lastReload') < appLayout.qLastReloadTime
 									if (wasReloaded && props.reloadApp) {
-										setButton("success")
+										// setButton("success")
 										setButton("ready")
 									}
 								}
