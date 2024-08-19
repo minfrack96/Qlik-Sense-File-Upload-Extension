@@ -51,7 +51,7 @@ In order for the extension to work properly with end-users, the following securi
 | **Resource**     | App          |
 | **Actions**      | Read, Update  |
 
-**Note**: These are not precisely defined security rules for QS, but rather the necessary requirements that must be met for the extension to function correctly with the specified options.
+**Note**: these are not precisely defined security rules for QS, but rather the necessary requirements that must be met for the extension to function correctly with the specified options.
 
 ## Appearance Customization
 Button label can be customized through `Appearance` section in properties.Other customization can be done through CSS by using class-based and id-based selectors (e.g., `upload-button-container`, `upload-button-wrapper`, etc.).  
@@ -62,10 +62,7 @@ Button label can be customized through `Appearance` section in properties.Other 
 3. Select whether the app should be reloaded after reload (e.g., `Reload app after upload`).
 4. Users can now upload files.
 
-![Screenshot](screenshot.png)
-
-## Important Note
-Users can only upload through this extension if they are allowed as per their licenses and the related security rules.  
+![Screenshot](screenshot.png) 
 
 ## TODOs
 - [ ] Implment a checkbox to hide selected file label. 
