@@ -254,34 +254,33 @@ define(["angular", "qlik", "jquery", "./utils", "./propertiesPanel", "text!./tem
 					})
 				}
 
-				function uploadFile(contentId, fileName, fileContent, endpoint) {
-					setButton('uploadStarted')
-					utils.generateXrfkey().then(function (xrfkey) {
-						$http({
-							method: 'POST',
-							url: requestURI + endpoint + contentId + `/uploadfile?&overwrite=true&externalpath=${fileName}&Xrfkey=${xrfkey}`,
-							data: fileContent,
-							transformRequest: angular.identity,
-							headers: { 'X-Qlik-Xrfkey': xrfkey, 'Content-Type': 'application/json'}
-						}).then(function (response) {
-							generatedTaskId = $scope.generatedTaskId = response.data.value;
-							setButton('uploadSuccess')
-							$(uploadButtonChosenFileId).text(fileName);
-							localStorage.setItem(`uploadButtonChosenFile-${extensionObjectId}`, fileName);
-							setButton('ready')
-							if(props.reloadApp) {
-								app.doReload().then(function (response) {
-									if (response) {
-										saveApp()
-									}
-									else {
-										setButton("error")
-									}
-								})
-							}
-						})
-					})
+				function uploadFile(contentLibraryName, fileName, fileContent, uploadUrl) {
+    					let formData = new FormData();
+					    formData.append("file", fileContent, fileName); // Use forced filename
+					    formData.append("folder", contentLibraryName);  // Target content library
+					
+					    fetch(uploadUrl, {
+					        method: "POST",
+					        headers: {
+					            "X-Qlik-Xrfkey": "1234567890abcdef", // Modify if necessary
+					            "X-Qlik-User": "UserDirectory=Internal; UserId=sa_repository", // Ensure correct user permissions
+					        },
+					        body: formData
+					    })
+					    .then(response => {
+					        if (!response.ok) {
+					            throw new Error(`Upload failed: ${response.statusText}`);
+					        }
+					        return response.json();
+					    })
+					    .then(data => {
+					        console.log("File uploaded successfully:", data);
+					    })
+					    .catch(error => {
+					        console.error("Error uploading file:", error);
+					    });
 				}
+
 
 
 				function uploadFileToAppContent(fileName, fileContent) {
