@@ -71,7 +71,7 @@ define(["./utils"], function (utils) {
                 }
             },
             about: { 
-                label: "About",
+                label: "Abouto",
                 type: "items",
                 items: {
                     appTitle: {
@@ -84,7 +84,7 @@ define(["./utils"], function (utils) {
                         url: "https://github.com/MohannedA/Qlik-Sense-File-Upload-Extension" 
                     },
                     createdBy: {
-                        label: "Created by Mohanned Ahmed",
+                        label: "Created by Mohanned Ahmed Ali",
                         component: "link",
                         url: "https://github.com/MohannedA"
                     },
