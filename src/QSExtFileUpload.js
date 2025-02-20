@@ -288,10 +288,38 @@ define(["angular", "qlik", "jquery", "./utils", "./propertiesPanel", "text!./tem
 					uploadFile(currentAppId, fileName, fileContent, '/qrs/appcontent/')
 				}
 
-				function uploadFileToContentLibrary(contentLibraryName, fileName, fileContent) {
-					uploadFile(contentLibraryName, fileName, fileContent, '/qrs/contentlibrary/')
-				}
+				function uploadFileToContentLibrary(file) {
+    					if (!file) {
+        					console.error("No file selected.");
+        					return;
+    					}
 
+    					let formData = new FormData();
+    					formData.append("file", file, "proyeccion editada.xlsx"); // Ensure correct filename
+    					formData.append("folder", "extraccion (vivibooki7erk_asus)"); // Ensure correct folder
+
+    					fetch("/qrs/contentlibrary/uploadfile", {
+        					method: "POST",
+        					headers: {
+            					"X-Qlik-Xrfkey": "1234567890abcdef", // Adjust if necessary
+            					"Content-Type": "multipart/form-data"
+        					},
+        					body: formData
+    					})
+    					.then(response => {
+        					if (!response.ok) {
+            					throw new Error("Upload failed");
+        					}
+        					return response.json();
+    					})
+    					.then(data => {
+        					console.log("File uploaded successfully:", data);
+    					})
+    					.catch(error => {
+        					console.error("Error uploading file:", error);
+    					});
+				}
+				
 
 				init().then(function () {
 					$(uploadButtonId).on('click', function (event) {
